@@ -1,0 +1,233 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Recognizing Actions from Robotic View for Natural Human-Robot Interaction">
+  <meta name="keywords" content="diffusion, nerf">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recognizing Actions from Robotic View for Natural Human-Robot Interaction</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <style>
+   .video-margin {
+      margin-bottom: 20px; 
+    }
+  </style>
+  <style>
+  .reduce-space {
+    margin-bottom: -100px;  
+  }
+  .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.video-group {
+  display: flex;
+  justify-content: center; /* 确保在此容器内居中 */
+  width: 100%;
+  gap: 10px; /* 缩小间隙 */
+}
+
+/* 修正比例计算 */
+.video-container {
+  width: calc(50% - 5px); /* 自动计算间距 */
+  max-width: 500px;
+  flex-shrink: 0;
+}
+
+.video-margin {
+  display: block;
+  width: 100%; 
+  height: auto;
+}
+
+.subtitle {
+  text-align: center;
+  margin: 0px 0 0;
+}
+</style>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="reduce-space">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            <span class='main-title'>
+              Recognizing <span class="highlight">Acti</span>ons from Robotic <span class="highlight">V</span>i<span class="highlight">e</span>w for Natural Human-Robot Interaction
+            </span>
+          </h1>
+  
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><strong>Anonymous ICCV submission</strong></span>
+            <br>
+        </div>
+
+        <div style="height: 10px;"></div>
+
+
+              <span class="link-block">
+                <a href="https://github.com"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Anonymous Code</span>
+                  </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://github.com"
+                   class="external-link button is-normal is-rounded is-dark">
+                   <span class="icon">
+                    <i class="far fa-images"></i>
+                   </span>
+                  <span>Data</span>
+                  </a>
+              </span>
+
+              <div style="height: 20px;"></div>
+            </div>
+            
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <p><img src="videos/ACTIVE/fig1.png" width="100%" /></p>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">ACTIVE</span> is a large-scale human behavior understanding dataset designed for human-robot interaction (N-HRI) scenarios, featuring 46,868 video instances with RGB and LiDAR point cloud data, supporting action recognition and human attribute recognition tasks.
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Natural Human-Robot Interaction (N-HRI) requires robots to recognize human actions at various distances and states, while the robot itself may be in motion or stationary. This setup is more flexible and practical than traditional human action recognition tasks. However, existing benchmarks are designed for conventional human action recognition and fail to address the complexities of understanding human action in N-HRI, given the limited data, data modalities, task categories, and diversity in subjects and environments. To understand human behavior in N-HRI, we introduce ACTIVE (Action in Robotic View), a large-scale human action dataset for N-HRI. ACTIVE includes 30 composite action categories with labels, 80 participants, and 46,868 video instances, covering both point cloud and RGB modalities. During data capture, participants perform various human actions in diverse environments at different distances (from 3m to 50m), with the camera platform also in motion to simulate varying robot states. This comprehensive and challenging benchmark aims to advance research on human action understanding in N-HRI, such as action recognition and attribute recognition. For recognizing actions in robotic view, we propose ACTIVE-PC, which achieves accurate perception of human actions at long distances through Multilevel Neighborhood Sampling, Layered Recognizers and Elastic Ellipse Query, along with precise decoupling of kinematic interference and human actions. Experiments demonstrate the effectiveness of this method on the ACTIVE dataset.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="row">
+  <div class="video-group">
+    <div class="video-container">
+      <img class="video-margin" src="videos/pc/1.gif" alt="PC Video">
+    </div>
+    <div class="video-container">
+      <img class="video-margin" src="videos/rgb/1.gif" alt="RGB Video">
+    </div>
+  </div>
+  <h2 class="subtitle">Walking</h2>
+</div>
+
+<div class="row">
+  <div class="video-group">
+    <div class="video-container">
+      <img class="video-margin" src="videos/pc/2.gif" alt="PC Video 2" width="50%">
+    </div>
+    <div class="video-container">
+      <img class="video-margin" src="videos/rgb/2.gif" alt="RGB Video 2" width="50%">
+    </div>
+  </div>
+  <h2 class="subtitle has-text-centered">Raising Arms</h2>
+</div>
+
+
+<div class="row">
+  <div class="video-group">
+    <div class="video-container">
+      <img class="video-margin" src="videos/pc/3.gif" alt="PC Video 2" width="50%">
+    </div>
+    <div class="video-container">
+      <img class="video-margin" src="videos/rgb/3.gif" alt="RGB Video 2" width="50%">
+    </div>
+  </div>
+  <h2 class="subtitle has-text-centered">Waving</h2>
+</div>
+
+
+
+
+<div style="height: 10px;"></div>
+
+<div class="row">
+  <h2 class="title is-3 has-text-centered">Samples for attribute recognition</h2>        
+</div>
+<div style="height: 20px;"></div>
+<div class="row has-text-centered">
+  <img src="videos/ACTIVE/attribute.png" alt="Sample image" style="max-width: 40%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+</div>
+<!-- <br><br> -->
+
+
+
+
+<nav class="navbar is-white" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+</nav>
+
+
+<footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              Website source based on <a href="https://github.com/nerfies/nerfies.github.io">this source code</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
